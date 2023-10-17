@@ -52,11 +52,18 @@ $(function () {
     
     if (hour < parseInt(currentHour)) {
       $(element).addClass('past');
+      $(element).removeClass('present');
+      $(element).removeClass('future');
     } else if (hour === parseInt(currentHour)) {
+      $(element).removeClass('past');
       $(element).addClass('present');
+      $(element).removeClass('future');
     } else {
+      $(element).removeClass('past');
+      $(element).removeClass('present');
       $(element).addClass('future');
     }
+    console.log(hour);
   });
   
   console.log(calHour);
